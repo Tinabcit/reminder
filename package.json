@@ -1,17 +1,39 @@
 {
-  "name": "reminder",
+  "name": "passportdemo",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon"
+    "start": "node server.js"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@admin-bro/express": "^3.1.0",
+    "@admin-bro/mongoose": "^1.1.0",
+    "admin-bro": "^4.0.1",
+    "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
-    "express-ejs-layouts": "^2.5.1",
-    "nodemon": "^2.0.9"
-  }
+    "express-ejs-layouts": "^2.5.0",
+    "express-formidable": "^1.2.0",
+    "express-layouts": "^1.0.0",
+    "express-session": "^1.17.1",
+    "passport": "^0.4.1",
+    "passport-github": "^1.1.0",
+    "passport-local": "^1.0.0",
+    "pg": "^8.6.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize-json": "^2.1.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tinabcit/reminder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Tinabcit/reminder/issues"
+  },
+  "homepage": "https://github.com/Tinabcit/reminder#readme",
+  "description": ""
 }
