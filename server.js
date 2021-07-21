@@ -60,18 +60,17 @@ passport.deserializeUser(function(id,cb) {
 });
 
 // I have github location working however, there is a bit error to it. I am trying yo fix as soon as possible.
-passport.use( GitHubStrategy(
-{
-  clientID: process.env.GITHUB_ID,
-  clientSecret: process.env.GITHUB_SECRET,
-  callbackURL:'http://localhost:8000/auth/github/callback'
+passport.use(new GitHubStrategy({
+  clientID: GITHUB_CLIENT_ID.process.env,
+  clientSecret: GITHUB_CLIENT_SECRET.process.env,
+  callbackURL: "http://localhost:8000/auth/github"
 },
-function(accessToken, refreshToken, profile, cb) {
-  cb(null,profile);
+function(accessToken, refreshToken, profile, done) {
+  User.findOrCreate({ githubId: profile.id }, function (err, user) {
+    return done(err, user);
+  });
 }
-)
-);
-
+));
 const isAuth = (req,res,next) => {
   if(req.user){
     next();
