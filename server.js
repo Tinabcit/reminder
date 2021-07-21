@@ -60,7 +60,7 @@ passport.deserializeUser(function(id,cb) {
 });
 
 // I have github location working however, there is a bit error to it. I am trying yo fix as soon as possible.
-passport.use(new GitHubStrategy(
+passport.use( GitHubStrategy(
 {
   clientID: process.env.GITHUB_ID,
   clientSecret: process.env.GITHUB_SECRET,
