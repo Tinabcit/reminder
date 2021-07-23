@@ -31,15 +31,15 @@ app.get("/reminder/:id",reminderController.listOne)
 
 // Case 6: User wants to EDIT an individual reminder
 
-app.get("/reminder/edit/id:",reminderController.edit)
+//app.get("/reminder/edit/id:",reminderController.edit)
 
 // Case 7: User wants to UPDATE by clicking the UPDATE BUTTON from Case 6, and excepts their reminder to be updated
 
-app.post("/reminder/edit/id:", reminderController.update)
+//app.post("/reminder/edit/id:", reminderController.update)
 
 // Case 8: User clicks the DELETE BUTTON and we expect the reminder to be deleted.
 
-app.post("/reminder/delete/id:", reminderController.delete)
+//app.post("/reminder/delete/id:", reminderController.delete)
 
 // localhost:8081
 app.listen(8081);
