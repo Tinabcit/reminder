@@ -41,5 +41,11 @@ app.get("/reminder/:id",reminderController.listOne)
 
 //app.post("/reminder/delete/id:", reminderController.delete)
 
+
+//app.get("/register",authController.register);
+//app.get("/login",authController.login);
+//app.get("/register",authController.registerSubmit);
+//app.get("/login",authController.loginSubmit);
+
 // localhost:8081
 app.listen(8081);
