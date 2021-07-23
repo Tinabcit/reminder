@@ -4,6 +4,8 @@ const fs = require("fs");
 
 let remindersController = {
   list: (req, res) => {
+    // Step1: Make a resquest to the unsplash photos URL
+
     //res.render("reminder/index",{
     //   reminders: database.cindy.reminders,
     // });
