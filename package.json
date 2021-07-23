@@ -1,7 +1,7 @@
 {
   "name": "reminder",
   "version": "1.0.0",
-  "description": "",
+  "description": "ACIT 2520 Final Project\r Ability to modify and delete reminders\r The following has been made :\r Start up the reminderlist application starter reminder list and walked throught the steps that has been provided in the class.\r - Added the modify reminder function code which I believe it worked.\r - Added the delete reminder function code which I believed it worked.",
   "main": "index.js",
   "scripts": {
     "start": "nodemon"
@@ -12,6 +12,17 @@
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.1",
+    "node-fetch": "^2.6.1",
     "nodemon": "^2.0.9"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tinabcit/reminder.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Tinabcit/reminder/issues"
+  },
+  "homepage": "https://github.com/Tinabcit/reminder#readme"
 }
