@@ -1,5 +1,6 @@
 let database = require("../database");
 const fs = require("fs");
+const fetch = require("node-fetch");
 // const accessKey = "R7LIEyG41oZEV8epVFNqNVdmqurVDUMEJ7eGjM8oS_eQ";
 
 let remindersController = {
