@@ -8,7 +8,7 @@ const authController = require("./controllers/auth_controller.js");
 const morgan = require("morgan");
 
 
-app.use(express.static(__dirname + "./public"));
+app.use(express.static(path.join(__dirname, './public')))
 app.use(express.urlencoded({extended:false}));
 app.use(ejsLayouts);
 app.set("view engine","ejs");
@@ -44,7 +44,7 @@ app.get("/reminder/:id",reminderController.listOne)
 
 // Case 8: User clicks the DELETE BUTTON and we expect the reminder to be deleted.
 
-//app.post("/reminder/delete/id:", reminderController.delete)
+app.post("/reminder/delete/id:", reminderController.delete)
 
 
 //app.get("/register",authController.register);

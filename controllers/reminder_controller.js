@@ -3,17 +3,23 @@ const fs = require("fs");
 const fetch = require("node-fetch");
 // const accessKey = "R7LIEyG41oZEV8epVFNqNVdmqurVDUMEJ7eGjM8oS_eQ";
 
+
+// Environment Variables
 let remindersController = {
-  list: (req, res) => {
+  list: async (req, res) => {
+    const key = process.env.UNSPLASH_KEY; // Public API KEY, // .dotenv ... heroku's version of dotenv
+    const query = "technology";
     // Step1: Make a resquest to the unsplash photos URL
 
-    //res.render("reminder/index",{
-    //   reminders: database.cindy.reminders,
-    // });
-    const listOfReminders = {
-      reminders: database.cindy.reminders
-    }
-    res.send(listOfReminders);
+    const response = await fetch(`https://api.unsplash.com/search/photos?query=${query}&client_id=${key}`);
+    const responseAsJson = await response.json();
+
+    console.log(responseAsJson);
+
+
+    res.render("reminder/index",{
+       reminders: database.cindy.reminders,
+    });
   },
 
   new: (req, res) => {
@@ -39,6 +45,7 @@ let remindersController = {
     } else {
       res.render("reminder/index", { reminders: database.cindy.reminders });
     }
+  },
+  
   }
-}
 module.exports = remindersController;
