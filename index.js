@@ -1,9 +1,14 @@
 const express = require("express");
 const ejsLayouts = require("express-ejs-layouts");
 const app = express();
+require('dotenv').config();
+const path = require("path");
 const reminderController = require("./controllers/reminder_controller");
+const authController = require("./controllers/auth_controller.js");
+const morgan = require("morgan");
 
-app.use(express.static(__dirname + "/public"));
+
+app.use(express.static(__dirname + "./public"));
 app.use(express.urlencoded({extended:false}));
 app.use(ejsLayouts);
 app.set("view engine","ejs");
