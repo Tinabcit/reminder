@@ -1,4 +1,4 @@
-# ACIT 2520 Final Project
+# ACIT 2520 Final Project (Final-Final Version)
 # Local Authentication
 - The following has been made :
 - Start up the login page and can access to the login page by email and password.
