@@ -1,4 +1,5 @@
 # ACIT 2520 Final Project
+- Second attempt or branch of the passportStarter
 # Local Authentication
 - The following has been made :
 - Start up the login page and can access to the login page by email and password.
